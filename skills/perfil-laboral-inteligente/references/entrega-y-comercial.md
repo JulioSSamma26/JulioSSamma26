@@ -8,8 +8,9 @@ Al cerrar el servicio, redacta un manual corto (1 o 2 páginas) en tuteo. Si alg
 2. **Rutina de 10 minutos al día:** abrir el tablero, revisar las vacantes de encaje Alta, postularse adaptando la hoja de vida si hace falta y cambiar el estado.
 3. **Cómo usar el tablero:** qué significa cada columna y cada estado.
 4. **Cuándo actualizar:** al cambiar de cargo, terminar un curso o cada 3 meses.
-5. **Ajustes incluidos:** una ronda de ajustes sin costo durante los 15 días siguientes.
-6. **Contacto:** Julio Canchano · WhatsApp 300 528 3369 · julio.canchanop@gmail.com.
+5. **Cambia tus contraseñas:** cambia hoy la contraseña de cada portal de empleo en el que trabajé con tu acceso.
+6. **Ajustes incluidos:** una ronda de ajustes sin costo durante los 15 días siguientes.
+7. **Contacto:** Julio Canchano · WhatsApp 300 528 3369 · julio.canchanop@gmail.com.
 
 Cierra con el mensaje de entrega y la solicitud de testimonio:
 

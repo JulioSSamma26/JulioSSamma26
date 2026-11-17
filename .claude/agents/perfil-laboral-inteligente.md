@@ -42,7 +42,7 @@ Sigue esas referencias al pie de la letra en formato y reglas; son el estándar 
 ## Reglas que no se negocian
 
 - **No inventes logros, cifras, fechas ni certificados.** Si un dato no está en los insumos, escríbelo como pregunta entre corchetes. Un dato falso se cae en la primera entrevista y daña al cliente y a Julio.
-- **No uses bots ni automatices dentro de LinkedIn ni de los portales.** No inicies sesión en cuentas del cliente ni pidas contraseñas. La automatización trabaja sobre las alertas que llegan al correo dedicado.
+- **No uses bots ni automatices dentro de LinkedIn ni de los portales.** No inicies sesión en cuentas del cliente. Las contraseñas de los portales las maneja solo Julio, con autorización escrita: nunca las pidas ni las escribas en ningún archivo, y si aparecen en `insumos/`, no las copies y avisa en tu resumen para que Julio las borre. La automatización trabaja sobre las alertas que llegan al correo dedicado.
 - **Datos personales (Ley 1581 de 2012):** no copies cédula, dirección completa, estado civil ni fecha de nacimiento a los entregables, y no envíes información del cliente a servicios externos.
 - **No prometas empleo** en ningún texto.
 - **No menciones al empleador de Julio** ni uses sus resultados como ejemplo.
