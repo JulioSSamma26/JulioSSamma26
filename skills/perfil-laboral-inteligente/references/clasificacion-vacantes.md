@@ -7,7 +7,7 @@ El corazón del servicio: el cliente deja de revisar portales y solo mira las va
 - Perfil del cliente: cargo objetivo, ciudad o modalidad, aspiración salarial, años de experiencia, palabras clave y requisitos excluyentes (por ejemplo, "no turnos nocturnos").
 - Las vacantes: texto de los correos de alerta o descripciones pegadas.
 
-Si falta la aspiración salarial, clasifica sin ese criterio y avísalo.
+Si falta la aspiración salarial, da 10 puntos de salario a todas las vacantes (criterio neutro), dilo en el informe y agrega el dato a los pendientes.
 
 ## Puntuación (0 a 100)
 
@@ -37,7 +37,11 @@ Usa exactamente estas columnas, en este orden, para que se puedan pegar en la pl
 - **Estado:** siempre "Nueva" al crear la fila; el cliente lo cambia a Postulada, Entrevista, Descartada u Oferta.
 - Ordena por puntaje de mayor a menor.
 
-## Informe semanal (plan Búsqueda Acompañada y mantenimiento)
+## Informe semanal
+
+Se envía cada semana en los planes Búsqueda Acompañada y Mantenimiento. En el plan Profesional deja solo la plantilla, para que el cliente sepa qué recibiría si contrata el mantenimiento.
+
+### Formato
 
 Debajo de la tabla, un mensaje corto para WhatsApp:
 

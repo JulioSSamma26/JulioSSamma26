@@ -2,7 +2,7 @@
 
 ## Manual de entrega para el cliente
 
-Al cerrar el servicio, redacta un manual corto (1 o 2 páginas) en tuteo:
+Al cerrar el servicio, redacta un manual corto (1 o 2 páginas) en tuteo. Si alguna pieza todavía no existe (correo dedicado, hoja del tablero, carpeta de Drive), márcala `[pendiente]` en lugar de presentarla como lista:
 
 1. **Qué quedó listo:** hoja de vida (archivo y dónde está), LinkedIn, carpeta de certificados, portales configurados, correo dedicado y tablero.
 2. **Rutina de 10 minutos al día:** abrir el tablero, revisar las vacantes de encaje Alta, postularse adaptando la hoja de vida si hace falta y cambiar el estado.

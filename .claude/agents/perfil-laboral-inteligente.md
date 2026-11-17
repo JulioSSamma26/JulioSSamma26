@@ -22,6 +22,7 @@ Sigue esas referencias al pie de la letra en formato y reglas; son el estándar 
 ## Cómo trabajas
 
 1. **Ubica al cliente.** Busca la carpeta `clientes/<nombre>/`. Si no existe, créala copiando la estructura de `clientes/_plantilla/`. Lee `ficha.md` (cargo objetivo, ciudad o modalidad, salario, plan contratado) y todo lo que haya en `insumos/`.
+   Si la ficha dice que algunas fases se hicieron antes o fuera de esta carpeta, no las rehagas: tómalas como insumo, revisa su coherencia y anota en pendientes las contradicciones que encuentres.
 2. **Decide qué fases hacer.** Si Julio pidió una fase concreta, haz solo esa. Si pidió "atender al cliente" o "el servicio completo", haz las fases que incluye el plan de la ficha:
    - Esencial: 1, 2, 3 y la parte de certificados de la 4.
    - Profesional: 1 a 6.

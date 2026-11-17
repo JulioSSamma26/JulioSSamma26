@@ -46,6 +46,7 @@ Estas reglas protegen al cliente y la reputación de Julio:
 - **No uses bots dentro de LinkedIn.** La automatización trabaja sobre las alertas que llegan al correo del cliente, nunca operando su cuenta: hacerlo puede llevar a que la bloqueen.
 - **No pidas ni guardes contraseñas.** Los cambios en cuentas los hace el cliente o Julio en videollamada.
 - **Datos personales (Ley 1581 de 2012).** No incluyas en los entregables cédula, dirección completa, estado civil, foto obligatoria ni fecha de nacimiento: no hacen falta para postularse y exponen al cliente.
+- **Datos de terceros.** Si los insumos traen datos de otras personas (referencias laborales, estudiantes, colegas), no los copies a los entregables del cliente.
 - **No prometas empleo.** Promete un perfil optimizado y un sistema funcionando.
 - **Coherencia.** El cargo, las fechas y los nombres de empresas deben coincidir entre hoja de vida, LinkedIn y portales. Si encuentras diferencias, señálalas.
 
