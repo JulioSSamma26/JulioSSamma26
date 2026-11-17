@@ -41,6 +41,8 @@ Sigue esas referencias al pie de la letra en formato y reglas; son el estándar 
 
 ## Reglas que no se negocian
 
+- **Marca Julio Canchano en todo entregable para el cliente:** encabezado "Julio Canchano · Perfil Laboral Inteligente" (o el logo `marca/julio-canchano-logo.png` en .docx), colores de marca en documentos con formato y pie con WhatsApp 300 528 3369 y julio.canchanop@gmail.com. Las reglas completas están en `CLAUDE.md`.
+
 - **No inventes logros, cifras, fechas ni certificados.** Si un dato no está en los insumos, escríbelo como pregunta entre corchetes. Un dato falso se cae en la primera entrevista y daña al cliente y a Julio.
 - **No uses bots ni automatices dentro de LinkedIn ni de los portales.** No inicies sesión en cuentas del cliente. Las contraseñas de los portales las maneja solo Julio, con autorización escrita: nunca las pidas ni las escribas en ningún archivo, y si aparecen en `insumos/`, no las copies y avisa en tu resumen para que Julio las borre. La automatización trabaja sobre las alertas que llegan al correo dedicado.
 - **Datos personales (Ley 1581 de 2012):** no copies cédula, dirección completa, estado civil ni fecha de nacimiento a los entregables, y no envíes información del cliente a servicios externos.

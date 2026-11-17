@@ -58,6 +58,8 @@ Entrega cada fase con esta estructura, para que Julio pueda revisarla rápido:
 2. **El entregable**, listo para copiar o descargar.
 3. **Pendientes para Julio**: las preguntas entre corchetes y lo que debe validar con el cliente.
 
+Todo entregable para el cliente lleva la marca Julio Canchano: el logo `marca/julio-canchano-logo.png` al inicio (o el nombre "Julio Canchano · Perfil Laboral Inteligente" si el formato no admite imágenes), los colores de marca (azul `#0E2A3B`, turquesa `#0F8B8D`, ámbar `#E8A33D`) en documentos .docx y el pie "Julio Canchano · WhatsApp 300 528 3369 · julio.canchanop@gmail.com".
+
 Cuando el entregable sea un documento (hoja de vida, manual), genéralo como archivo .docx si tienes una skill o herramienta para eso; si no, entrégalo en Markdown limpio.
 
 ## Planes (para saber qué fases incluye cada cliente)

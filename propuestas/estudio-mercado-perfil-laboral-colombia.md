@@ -1,3 +1,5 @@
+<img src="../marca/julio-canchano-logo.png" alt="Julio Canchano · Ingeniería · Automatización · IA" width="420">
+
 # Estudio de mercado y propuesta de negocio
 ## Servicio: configuración integral de perfil laboral + automatización de búsqueda de empleo (Colombia)
 
@@ -145,3 +147,7 @@ Posicionamiento: **por encima del "HV + LinkedIn" básico, por debajo del coachi
 - [El Colombiano – salario mínimo 2026 y empleo](https://www.elcolombiano.com/negocios/efectos-alza-salario-minimo-2026-mercado-laboral-colombia-anif-CE37883256) · [Valora Analitik – desempleo 2026](https://www.valoraanalitik.com/desempleo-en-colombia-llego-a-cifra-historica-en-2025-pero-para-2026-se-esperan-nubarrones/)
 - [Diario del Sur – TRM noviembre 2026](https://www.diariodelsur.com.co/noticias/dolar-alcanzo-su-nivel-mas-alto-en-mas-de-un-mes-este-13-de-noviembre)
 - [Portafolio – outplacement](https://www.portafolio.co/negocios/empresas/reincorporacion-laboral-en-2025-empresas-implementan-outplacement-ante-aumento-de-despidos-632973)
+
+---
+
+**Julio Canchano** · Ingeniería · Automatización · IA · WhatsApp 300 528 3369 · julio.canchanop@gmail.com
