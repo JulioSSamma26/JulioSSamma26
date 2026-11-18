@@ -1,0 +1,445 @@
+<title>Perfil Laboral Inteligente</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Perfil Laboral Inteligente, un servicio de Julio Canchano: hoja de vida ATS, LinkedIn, portales de empleo y un tablero de vacantes con IA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600&family=JetBrains+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: una sola columna editorial; el héroe muestra el tablero de vacantes (el diferencial) y cada sección baja como una señal del campo al centro de control. */
+:root {
+  --ground: #F3F1EC;
+  --surface: #FBFAF7;
+  --deep: #0E2A3B;
+  --ink: #0E2A3B;
+  --muted: #4A5A66;
+  --line: #D6DCDB;
+  --brand: #0F8B8D;
+  --brand-ink: #0B6E70;
+  --accent: #E8A33D;
+  --on-deep: #F3F1EC;
+  --on-deep-muted: #C5D0DD;
+  --deep-2: #12303F;
+  --ok-bg: #DCEFEA;
+  --mid-bg: #F6E7CC;
+  --low-bg: #E7E9EA;
+  --font-display: 'Space Grotesk', Arial, sans-serif;
+  --font-body: 'Inter', Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground: #0B1E2A; --surface: #12303F; --deep: #081822; --ink: #EEF3F2; --muted: #A9BAC2; --line: #23404F;
+    --brand: #2BB3B1; --brand-ink: #4FC9C6; --accent: #F0B357; --on-deep: #EEF3F2; --on-deep-muted: #C5D0DD; --deep-2: #12303F;
+    --ok-bg: #134540; --mid-bg: #4A3A1C; --low-bg: #23404F; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --ground: #0B1E2A; --surface: #12303F; --deep: #081822; --ink: #EEF3F2; --muted: #A9BAC2; --line: #23404F;
+  --brand: #2BB3B1; --brand-ink: #4FC9C6; --accent: #F0B357; --on-deep: #EEF3F2; --on-deep-muted: #C5D0DD; --deep-2: #12303F;
+  --ok-bg: #134540; --mid-bg: #4A3A1C; --low-bg: #23404F; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; transition: none !important; } }
+body { background: var(--ground); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.6; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.08; margin: 0; text-wrap: balance; }
+h2 { font-size: clamp(30px, 4.2vw, 46px); letter-spacing: -0.8px; }
+h3 { font-size: 21px; line-height: 1.25; }
+p { margin: 0; }
+a { color: var(--brand-ink); }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+.label { font-family: var(--font-mono); font-weight: 600; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: var(--brand-ink); }
+.lead { font-size: 19px; color: var(--muted); max-width: 62ch; }
+section { padding-block: clamp(56px, 8vw, 96px); }
+.sec-head { display: flex; flex-direction: column; gap: 14px; margin-bottom: 40px; max-width: 760px; }
+
+/* marca */
+.mark path { fill: none; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; }
+.mark .c { stroke: var(--brand); } .mark .j { stroke: var(--ink); } .mark .d { fill: var(--accent); }
+.on-deep .mark .j { stroke: var(--on-deep); }
+.on-deep .mark .c { stroke: #2BB3B1; }
+
+/* botones */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 12px 22px; border-radius: 999px; font-weight: 600; font-size: 16px; text-decoration: none; border: 2px solid transparent; cursor: pointer; font-family: var(--font-body); }
+.btn-primary { background: var(--accent); color: #0E2A3B; }
+.btn-primary:hover { filter: brightness(1.05); }
+.btn-ghost { border-color: var(--line); color: var(--ink); background: transparent; }
+.btn-ghost:hover { border-color: var(--brand); }
+.btn svg { width: 20px; height: 20px; }
+
+/* encabezado */
+header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--ground); border-bottom: 1px solid var(--line); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 21; background: var(--ground); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
+.brand svg { width: 40px; height: 40px; flex-shrink: 0; }
+.brand b { font-family: var(--font-display); font-size: 19px; display: block; line-height: 1.1; }
+.brand small { font-family: var(--font-mono); font-size: 11px; letter-spacing: 1.5px; color: var(--brand-ink); text-transform: uppercase; }
+.top nav { display: flex; gap: 22px; align-items: center; }
+.top nav a.nl { color: var(--muted); text-decoration: none; font-size: 15px; }
+.top nav a.nl:hover { color: var(--ink); }
+.top .btn { white-space: nowrap; }
+@media (max-width: 860px) { .top nav a.nl { display: none; } .top .btn { padding: 10px 16px; font-size: 15px; min-height: 44px; } }
+@media (max-width: 440px) { .brand small { display: none; } .brand b { font-size: 17px; } .top .btn { padding: 8px 14px; font-size: 14px; } }
+
+/* héroe */
+.hero { padding-block: clamp(40px, 6vw, 72px) clamp(56px, 8vw, 88px); }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 48px; align-items: center; }
+@media (max-width: 920px) { .hero .wrap { grid-template-columns: minmax(0, 1fr); } }
+.hero h1 { font-size: clamp(38px, 5.6vw, 64px); letter-spacing: -1.5px; }
+.hero h1 em { font-style: normal; color: var(--brand-ink); }
+.hero .copy { display: flex; flex-direction: column; gap: 22px; }
+.hero .ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+.hero .fine { font-size: 14px; color: var(--muted); }
+
+/* tablero de ejemplo */
+.board { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 20px; box-shadow: 0 1px 2px rgba(14,42,59,.06), 0 18px 40px rgba(14,42,59,.10); min-width: 0; }
+.board-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 14px; flex-wrap: wrap; }
+.board-head b { font-family: var(--font-display); font-size: 18px; }
+.tag { font-family: var(--font-mono); font-size: 11px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--muted); border: 1px dashed var(--line); border-radius: 999px; padding: 3px 10px; }
+.rows { display: flex; flex-direction: column; gap: 10px; }
+.row { display: grid; grid-template-columns: 52px minmax(0, 1fr) auto; gap: 14px; align-items: center; padding: 12px; border-radius: 14px; background: var(--ground); animation: arrive .5s ease-out both; }
+.row:nth-child(2) { animation-delay: .12s; } .row:nth-child(3) { animation-delay: .24s; } .row:nth-child(4) { animation-delay: .36s; }
+@keyframes arrive { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.score { font-family: var(--font-mono); font-weight: 600; font-size: 18px; text-align: center; border-radius: 10px; padding: 8px 0; font-variant-numeric: tabular-nums; }
+.s-hi { background: var(--ok-bg); color: var(--brand-ink); }
+.s-mid { background: var(--mid-bg); color: var(--ink); }
+.s-lo { background: var(--low-bg); color: var(--muted); }
+.row .t { font-weight: 600; font-size: 15px; line-height: 1.3; }
+.row .m { font-size: 13px; color: var(--muted); line-height: 1.35; }
+.pill { font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 4px 9px; border-radius: 999px; white-space: nowrap; }
+.p-hi { background: var(--brand); color: #FBFAF7; }
+.p-mid { background: var(--accent); color: #0E2A3B; }
+.p-lo { background: var(--low-bg); color: var(--muted); }
+.board-foot { margin-top: 14px; font-size: 13px; color: var(--muted); display: flex; gap: 8px; align-items: center; }
+.board-foot i { width: 8px; height: 8px; border-radius: 50%; background: var(--brand); display: inline-block; }
+
+/* problema */
+.pain { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+@media (max-width: 820px) { .pain { grid-template-columns: minmax(0, 1fr); } }
+.pain article { border-top: 3px solid var(--ink); padding-top: 18px; display: flex; flex-direction: column; gap: 10px; }
+.pain p { color: var(--muted); }
+
+/* servicio */
+.band-deep { background: var(--deep); color: var(--on-deep); }
+.band-deep .label { color: #4FC9C6; }
+.band-deep .lead { color: var(--on-deep-muted); }
+.svc { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 1000px) { .svc { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .svc { grid-template-columns: minmax(0, 1fr); } }
+.svc article { background: var(--deep-2); border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 10px; }
+.svc svg { width: 30px; height: 30px; stroke: #4FC9C6; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.svc p { color: var(--on-deep-muted); font-size: 15px; }
+.svc .star { outline: 2px solid var(--accent); }
+.svc .star .k { font-family: var(--font-mono); font-size: 11px; letter-spacing: 1.2px; color: var(--accent); text-transform: uppercase; }
+
+/* flujo */
+.flow { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; position: relative; }
+.flow li { position: relative; padding: 0 14px 0 0; display: flex; flex-direction: column; gap: 10px; }
+.flow .n { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; font-family: var(--font-mono); font-weight: 600; background: var(--surface); border: 2px solid var(--brand); color: var(--brand-ink); position: relative; z-index: 1; }
+.flow li:last-child .n { background: var(--accent); border-color: var(--accent); color: #0E2A3B; }
+.flow li::before { content: ""; position: absolute; left: 44px; right: 0; top: 21px; height: 2px; background: var(--brand); opacity: .5; }
+.flow li:last-child::before { display: none; }
+.flow p { color: var(--muted); font-size: 15px; }
+@media (max-width: 900px) {
+  .flow { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+  .flow li { display: grid; grid-template-columns: 44px minmax(0, 1fr); column-gap: 16px; padding: 0; }
+  .flow li > :not(.n) { grid-column: 2; }
+  .flow .n { grid-row: span 2; }
+  .flow li::before { left: 21px; top: 44px; bottom: -22px; right: auto; width: 2px; height: auto; }
+}
+.note { margin-top: 28px; font-size: 15px; color: var(--muted); display: flex; gap: 10px; align-items: flex-start; }
+.note svg { width: 20px; height: 20px; flex-shrink: 0; stroke: var(--brand-ink); fill: none; stroke-width: 2; margin-top: 2px; }
+
+/* planes */
+.plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-items: start; }
+@media (max-width: 900px) { .plans { grid-template-columns: minmax(0, 1fr); } }
+.plan { background: var(--surface); border: 1px solid var(--line); border-radius: 22px; padding: 28px; display: flex; flex-direction: column; gap: 14px; }
+.plan.feat { background: var(--deep); color: var(--on-deep); border-color: var(--deep); }
+.plan .badge { align-self: flex-start; background: var(--accent); color: #0E2A3B; font-weight: 600; font-size: 13px; padding: 4px 12px; border-radius: 999px; }
+.plan h3 { font-size: 26px; }
+.plan .time { font-family: var(--font-mono); font-size: 13px; color: var(--brand-ink); letter-spacing: .5px; }
+.plan.feat .time { color: #4FC9C6; }
+.plan ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.plan li { display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 10px; font-size: 15px; }
+.plan li svg { width: 18px; height: 18px; stroke: var(--brand); fill: none; stroke-width: 2.4; margin-top: 3px; }
+.plan.feat li svg { stroke: #4FC9C6; }
+.plan.feat li { color: var(--on-deep-muted); }
+.plans-foot { margin-top: 22px; color: var(--muted); font-size: 15px; }
+.plans-foot b { color: var(--ink); }
+
+/* sobre Julio */
+.about { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 48px; align-items: center; }
+@media (max-width: 860px) { .about { grid-template-columns: minmax(0, 1fr); } }
+.about-card { background: var(--deep); color: var(--on-deep); border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 18px; position: relative; overflow: hidden; }
+.about-card svg.big { width: 96px; height: 96px; }
+.about-card .nm { font-family: var(--font-display); font-weight: 700; font-size: 30px; line-height: 1.1; }
+.about-card .sp { font-family: var(--font-mono); font-size: 12px; letter-spacing: 2px; color: #4FC9C6; text-transform: uppercase; }
+.dots { position: absolute; right: -10px; bottom: -10px; width: 180px; height: 140px; opacity: .35; }
+.dots circle { fill: #2BB3B1; }
+.about .txt { display: flex; flex-direction: column; gap: 16px; }
+.about .txt p { color: var(--muted); }
+.facts { display: flex; flex-wrap: wrap; gap: 10px; }
+.facts span { font-family: var(--font-mono); font-size: 13px; border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; color: var(--ink); }
+
+/* confianza */
+.trust { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 900px) { .trust { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .trust { grid-template-columns: minmax(0, 1fr); } }
+.trust article { border: 1px solid var(--line); border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 8px; background: var(--surface); }
+.trust p { color: var(--muted); font-size: 15px; }
+
+/* preguntas */
+.faq { display: flex; flex-direction: column; border-top: 1px solid var(--line); max-width: 820px; }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { cursor: pointer; list-style: none; padding: 20px 40px 20px 0; font-family: var(--font-display); font-weight: 700; font-size: 19px; position: relative; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: 6px; top: 16px; font-family: var(--font-mono); font-size: 24px; color: var(--brand-ink); }
+.faq details[open] summary::after { content: "−"; }
+.faq details p { padding: 0 0 20px; color: var(--muted); max-width: 70ch; }
+
+/* cierre */
+.cta-final { background: var(--brand); color: #FBFAF7; }
+:root[data-theme="dark"] .cta-final { background: #0B6E70; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .cta-final { background: #0B6E70; } }
+.cta-final .wrap { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 32px; align-items: center; }
+@media (max-width: 860px) { .cta-final .wrap { grid-template-columns: minmax(0, 1fr); } }
+.cta-final h2 { color: #FBFAF7; }
+.cta-final p { color: #E6F4F3; }
+.contact { background: #FBFAF7; color: #0E2A3B; border-radius: 22px; padding: 26px; display: flex; flex-direction: column; gap: 14px; }
+.contact .lbl { font-family: var(--font-mono); font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: #0B6E70; }
+.contact .val { font-family: var(--font-display); font-weight: 700; font-size: 24px; user-select: all; overflow-wrap: anywhere; }
+.contact .row2 { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.copy-btn { font-size: 14px; min-height: 40px; padding: 8px 14px; border-radius: 999px; border: 1.5px solid #D6DCDB; background: transparent; color: #0E2A3B; cursor: pointer; font-family: var(--font-body); }
+.copy-btn:hover { border-color: #0F8B8D; }
+.copied { font-size: 13px; color: #0B6E70; }
+
+footer { background: var(--deep); color: var(--on-deep-muted); font-size: 14px; }
+footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; gap: 14px 28px; align-items: center; justify-content: space-between; }
+footer .brand b, footer .brand { color: var(--on-deep); }
+footer .brand small { color: #4FC9C6; }
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Julio Canchano, inicio">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><path class="c" d="M45.1 18.9A18.5 18.5 0 1 0 45.1 45.1"/><path class="j" d="M35 20v15a6 6 0 0 1-12 0"/><circle class="d" cx="52" cy="32" r="4.5"/></svg>
+      <span><b>Julio Canchano</b><small>Perfil Laboral Inteligente</small></span>
+    </a>
+    <nav aria-label="Secciones">
+      <a class="nl" href="#servicio">Servicio</a>
+      <a class="nl" href="#como-funciona">Cómo funciona</a>
+      <a class="nl" href="#planes">Planes</a>
+      <a class="nl" href="#preguntas">Preguntas</a>
+      <a class="btn btn-primary" href="https://wa.me/573005283369?text=Hola%20Julio%2C%20quiero%20mi%20diagn%C3%B3stico%20gratis%20de%20perfil%20laboral" target="_blank" rel="noopener">Diagnóstico gratis</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="wrap">
+      <div class="copy">
+        <p class="label">Un servicio de Julio Canchano</p>
+        <h1>Deja de buscar empleo a mano. <em>Tu perfil trabaja por ti.</em></h1>
+        <p class="lead">Dejo listos tu hoja de vida, tu LinkedIn, tus certificados y tus portales de empleo, y te monto un tablero con inteligencia artificial que clasifica cada vacante por encaje, salario y modalidad.</p>
+        <div class="ctas">
+          <a class="btn btn-primary" href="https://wa.me/573005283369?text=Hola%20Julio%2C%20quiero%20mi%20diagn%C3%B3stico%20gratis%20de%20perfil%20laboral" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 20.5l1.8-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>
+            Pide tu diagnóstico gratis
+          </a>
+          <a class="btn btn-ghost" href="#como-funciona">Ver cómo funciona</a>
+        </div>
+        <p class="fine">Diagnóstico de 20 minutos por videollamada. Sin compromiso.</p>
+      </div>
+
+      <div class="board" role="img" aria-label="Ejemplo de tablero de vacantes clasificadas: tres vacantes con puntajes 88, 71 y 42">
+        <div class="board-head"><b>Tu tablero de vacantes</b><span class="tag">Ejemplo</span></div>
+        <div class="rows">
+          <div class="row"><div class="score s-hi">88</div><div><div class="t">Coordinadora de proyectos sociales</div><div class="m">ONG de cooperación · Barranquilla · $5,2 M</div></div><span class="pill p-hi">Alta</span></div>
+          <div class="row"><div class="score s-mid">71</div><div><div class="t">Analista de datos operativos</div><div class="m">Empresa de servicios · Remoto · Salario no publicado</div></div><span class="pill p-mid">Media</span></div>
+          <div class="row"><div class="score s-lo">42</div><div><div class="t">Auxiliar administrativo</div><div class="m">Comercio · Cartagena · Por debajo de tu rango</div></div><span class="pill p-lo">Baja</span></div>
+        </div>
+        <div class="board-foot"><i></i>Se actualiza con las alertas de elempleo, Computrabajo, Magneto e Indeed.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="problema" aria-labelledby="t-problema">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="label">El problema</p>
+        <h2 id="t-problema">La mayoría de hojas de vida se descartan antes de que alguien las lea</h2>
+      </div>
+      <div class="pain">
+        <article><h3>Filtros automáticos</h3><p>Los sistemas ATS descartan hojas de vida por el formato o porque no tienen las palabras exactas del cargo.</p></article>
+        <article><h3>Perfiles que no destacan</h3><p>Un titular genérico y experiencias que solo listan funciones hacen que el reclutador pase de largo.</p></article>
+        <article><h3>Horas perdidas</h3><p>Revisar varios portales cada día y postularse a vacantes que no encajan cansa y no da resultados.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicio" class="band-deep on-deep" aria-labelledby="t-servicio">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="label">Qué incluye</p>
+        <h2 id="t-servicio">Todo tu perfil laboral, listo y alineado</h2>
+        <p class="lead">Los mismos cargos, fechas y logros en todos lados, escritos para que te encuentren.</p>
+      </div>
+      <div class="svc">
+        <article><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/></svg><h3>Hoja de vida ATS</h3><p>Con logros medibles y las palabras clave de tu cargo.</p></article>
+        <article><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg><h3>LinkedIn optimizado</h3><p>Titular, "Acerca de", experiencias, aptitudes y banner.</p></article>
+        <article><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg><h3>Certificados en orden</h3><p>Carpeta digital con enlaces y carga en LinkedIn.</p></article>
+        <article><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><h3>Portales de empleo</h3><p>elempleo, Computrabajo, Magneto e Indeed con alertas.</p></article>
+        <article class="star"><span class="k">El diferencial</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><h3>Tablero con IA</h3><p>Cada vacante clasificada por encaje, salario y modalidad.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="como-funciona" aria-labelledby="t-flujo">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="label">Cómo funciona</p>
+        <h2 id="t-flujo">Las vacantes llegan a ti, ya filtradas</h2>
+      </div>
+      <ol class="flow">
+        <li><span class="n">1</span><h3>Configuro tus portales</h3><p>Alertas por cargo, ciudad y salario en 4 portales.</p></li>
+        <li><span class="n">2</span><h3>Llegan a un correo</h3><p>Un buzón dedicado solo a tu búsqueda.</p></li>
+        <li><span class="n">3</span><h3>La IA las clasifica</h3><p>Encaje con tu perfil, salario y modalidad.</p></li>
+        <li><span class="n">4</span><h3>Tu tablero se ordena</h3><p>Las mejores vacantes aparecen primero.</p></li>
+        <li><span class="n">5</span><h3>Tú postulas</h3><p>Solo a las que valen la pena: 10 minutos al día.</p></li>
+      </ol>
+      <p class="note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg>Sin bots dentro de tu LinkedIn: la automatización trabaja sobre las alertas que llegan a tu correo, así tu cuenta no corre riesgo.</p>
+    </div>
+  </section>
+
+  <section id="planes" aria-labelledby="t-planes" style="background: var(--surface); border-block: 1px solid var(--line);">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="label">Planes</p>
+        <h2 id="t-planes">Elige cuánto acompañamiento necesitas</h2>
+      </div>
+      <div class="plans">
+        <article class="plan">
+          <h3>Esencial</h3><p class="time">Listo en 3 días hábiles</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Hoja de vida optimizada para ATS</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>LinkedIn reescrito y optimizado</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Certificados organizados y cargados</li>
+          </ul>
+        </article>
+        <article class="plan feat on-deep">
+          <span class="badge">El más elegido</span>
+          <h3>Profesional</h3><p class="time">Listo en 5 días hábiles</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Todo el plan Esencial</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>4 portales de empleo configurados con alertas</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Tablero de vacantes clasificadas con IA</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Videollamada de entrega y manual</li>
+          </ul>
+        </article>
+        <article class="plan">
+          <h3>Búsqueda Acompañada</h3><p class="time">60 días a tu lado</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Todo el plan Profesional</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Hoja de vida en inglés</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>2 simulacros de entrevista</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Informe semanal con las mejores vacantes</li>
+          </ul>
+        </article>
+      </div>
+      <p class="plans-foot"><b>Planes desde $249.000 COP.</b> En el diagnóstico gratis te digo cuál te conviene y te envío la propuesta con el precio exacto. Pagas 50 % al iniciar y 50 % a la entrega.</p>
+    </div>
+  </section>
+
+  <section id="sobre-mi" aria-labelledby="t-sobre">
+    <div class="wrap about">
+      <div class="about-card on-deep">
+        <svg class="mark big" viewBox="0 0 64 64" aria-hidden="true"><path class="c" d="M45.1 18.9A18.5 18.5 0 1 0 45.1 45.1"/><path class="j" d="M35 20v15a6 6 0 0 1-12 0"/><circle class="d" cx="52" cy="32" r="4.5"/></svg>
+        <div><p class="nm">Ing. Julio César Canchano Parodi</p><p class="sp">Ingeniería · Automatización · IA</p></div>
+        <svg class="dots" viewBox="0 0 180 140" aria-hidden="true"><circle cx="20" cy="20" r="3"/><circle cx="50" cy="20" r="3"/><circle cx="80" cy="20" r="3"/><circle cx="110" cy="20" r="3"/><circle cx="140" cy="20" r="3"/><circle cx="20" cy="50" r="3"/><circle cx="50" cy="50" r="3"/><circle cx="80" cy="50" r="3"/><circle cx="110" cy="50" r="3"/><circle cx="140" cy="50" r="3"/><circle cx="20" cy="80" r="3"/><circle cx="50" cy="80" r="3"/><circle cx="80" cy="80" r="3"/><circle cx="110" cy="80" r="3"/><circle cx="140" cy="80" r="3"/><circle cx="20" cy="110" r="3"/><circle cx="50" cy="110" r="3"/><circle cx="80" cy="110" r="3"/><circle cx="110" cy="110" r="3"/><circle cx="140" cy="110" r="3"/></svg>
+      </div>
+      <div class="txt">
+        <p class="label">Quién está detrás</p>
+        <h2 id="t-sobre">Un ingeniero que automatiza procesos de verdad</h2>
+        <p>Soy ingeniero electrónico de la Costa Caribe, con más de 10 años en redes eléctricas y sistemas SCADA. Mi trabajo es convertir tareas manuales en sistemas que funcionan solos.</p>
+        <p>Buscar empleo es uno de los procesos más manuales que existen. Por eso le apliqué lo que sé hacer: un perfil bien construido y un sistema que te trae las vacantes correctas.</p>
+        <div class="facts"><span>Python</span><span>SQL</span><span>Power Platform</span><span>Claude IA</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="confianza" aria-labelledby="t-confianza" style="padding-top: 0;">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="label">Reglas claras</p>
+        <h2 id="t-confianza">Tu información, protegida</h2>
+      </div>
+      <div class="trust">
+        <article><h3>Acceso temporal</h3><p>Uso tu acceso a los portales solo durante el servicio y con tu autorización. Al terminar cambias tus contraseñas.</p></article>
+        <article><h3>Ley 1581 de 2012</h3><p>Firmas una autorización de tratamiento de datos. Tus documentos se usan solo para tu servicio.</p></article>
+        <article><h3>Sin bots en LinkedIn</h3><p>Ajustamos tu LinkedIn juntos en videollamada, con tu sesión abierta.</p></article>
+        <article><h3>Promesas honestas</h3><p>Garantizo un perfil optimizado y un sistema funcionando. Conseguir el empleo depende también de las empresas.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="preguntas" aria-labelledby="t-faq" style="padding-top: 0;">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="label">Preguntas frecuentes</p>
+        <h2 id="t-faq">Lo que más me preguntan</h2>
+      </div>
+      <div class="faq">
+        <details><summary>¿Qué necesito para empezar?</summary><p>Tu hoja de vida actual, tu perfil de LinkedIn en PDF (si tienes) y el cargo que buscas. Con eso hago el diagnóstico. El resto de documentos te los pido con una lista clara.</p></details>
+        <details><summary>¿Cuánto tiempo toma?</summary><p>El plan Esencial queda listo en 3 días hábiles y el Profesional en 5. La Búsqueda Acompañada dura 60 días.</p></details>
+        <details><summary>¿Me garantizas que voy a conseguir empleo?</summary><p>No, y desconfía de quien te lo garantice. Te garantizo un perfil que pasa los filtros y un sistema que te trae las vacantes correctas. Conseguir el empleo depende también de las empresas y de tus entrevistas, y en eso también te puedo preparar.</p></details>
+        <details><summary>¿Sirve si busco trabajo remoto o en otro país?</summary><p>Sí. Configuramos alertas de trabajo remoto y, si te quieres mudar, búsquedas en otras ciudades y en organismos internacionales. Para el exterior suelen pedir inglés, así que lo revisamos en el diagnóstico.</p></details>
+        <details><summary>¿Cómo pago?</summary><p>50 % al iniciar y 50 % a la entrega, por transferencia, Nequi, Daviplata o PSE. La Búsqueda Acompañada se puede pagar en 2 cuotas.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final" aria-labelledby="t-cta">
+    <div class="wrap">
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <h2 id="t-cta">Agenda tu diagnóstico gratis de 20 minutos</h2>
+        <p>Te muestro qué está frenando tu perfil y te doy un consejo que puedes aplicar hoy mismo. Escríbeme "PERFIL" por WhatsApp.</p>
+        <div><a class="btn btn-primary" href="https://wa.me/573005283369?text=PERFIL" target="_blank" rel="noopener">Escribir por WhatsApp</a></div>
+      </div>
+      <div class="contact">
+        <div><p class="lbl">WhatsApp</p><div class="row2"><span class="val" id="v-wa">300 528 3369</span><button class="copy-btn" type="button" data-copy="+57 300 528 3369" id="c-wa">Copiar</button></div></div>
+        <div><p class="lbl">Correo</p><div class="row2"><span class="val" id="v-mail" style="font-size: 19px;">julio.canchanop@gmail.com</span><button class="copy-btn" type="button" data-copy="julio.canchanop@gmail.com" id="c-mail">Copiar</button></div></div>
+        <p class="copied" id="copied" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="on-deep">
+  <div class="wrap">
+    <span class="brand">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true" style="width: 36px; height: 36px;"><path class="c" d="M45.1 18.9A18.5 18.5 0 1 0 45.1 45.1"/><path class="j" d="M35 20v15a6 6 0 0 1-12 0"/><circle class="d" cx="52" cy="32" r="4.5"/></svg>
+      <span><b>Julio Canchano</b><small>Ingeniería · Automatización · IA</small></span>
+    </span>
+    <span>Perfil Laboral Inteligente es un servicio de Julio Canchano · Colombia</span>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.copy-btn').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var text = b.getAttribute('data-copy');
+    var out = document.getElementById('copied');
+    var done = function () { out.textContent = 'Copiado: ' + text; };
+    try {
+      navigator.clipboard.writeText(text).then(done, function () {
+        var r = document.createRange(); r.selectNodeContents(b.previousElementSibling);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        out.textContent = 'Selecciona y copia el texto resaltado.';
+      });
+    } catch (e) { out.textContent = 'Selecciona y copia el texto.'; }
+  });
+});
+</script>
