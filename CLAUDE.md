@@ -11,3 +11,8 @@ Todo documento, presentación, flyer, propuesta, plantilla o entregable que se c
 - **Pie de marca:** "Julio Canchano · Ingeniería · Automatización · IA · WhatsApp 300 528 3369 · julio.canchanop@gmail.com".
 - **Nombre:** "Julio Canchano" en piezas comerciales; "Ing. Julio César Canchano Parodi" en documentos formales. Los servicios se firman como "un servicio de Julio Canchano".
 - No usar logos, colores ni resultados de Afinia o Grupo EPM.
+
+## Publicaciones en redes
+
+- Las publicaciones y flyers para LinkedIn, Instagram, Facebook y WhatsApp van **sin precios**. El precio solo va en la propuesta comercial, la presentación de venta y la conversación con el cliente.
+- Nada se publica en redes sin que Julio apruebe el texto exacto y la red.
