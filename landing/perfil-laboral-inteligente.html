@@ -84,14 +84,31 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 @media (max-width: 440px) { .brand small { display: none; } .brand b { font-size: 17px; } .top .btn { padding: 8px 14px; font-size: 14px; } }
 
 /* héroe */
-.hero { padding-block: clamp(40px, 6vw, 72px) clamp(56px, 8vw, 88px); }
-.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 48px; align-items: center; }
+.hero { padding-block: clamp(40px, 6vw, 72px) clamp(72px, 9vw, 112px); }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 64px; align-items: center; }
 @media (max-width: 920px) { .hero .wrap { grid-template-columns: minmax(0, 1fr); } }
 .hero h1 { font-size: clamp(38px, 5.6vw, 64px); letter-spacing: -1.5px; }
 .hero h1 em { font-style: normal; color: var(--brand-ink); }
 .hero .copy { display: flex; flex-direction: column; gap: 22px; }
 .hero .ctas { display: flex; flex-wrap: wrap; gap: 12px; }
 .hero .fine { font-size: 14px; color: var(--muted); }
+
+/* visual del héroe */
+.hero-visual { position: relative; min-width: 0; }
+.hero-photo { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 24px; display: block; box-shadow: 0 24px 60px rgba(14,42,59,.22); }
+.hero-visual .board { position: absolute; left: -56px; bottom: -56px; width: min(300px, 70%); padding: 12px; z-index: 1; }
+.hero-visual .board .row:nth-child(3) { display: none; }
+.hero-visual .board .row { padding: 8px; gap: 10px; grid-template-columns: 44px minmax(0, 1fr) auto; }
+.hero-visual .board .score { font-size: 15px; padding: 6px 0; }
+.hero-visual .board .t { font-size: 13px; } .hero-visual .board .m { font-size: 11.5px; }
+.hero-visual .board .board-foot { display: none; }
+@media (max-width: 920px) { .hero-visual .board { position: relative; left: auto; bottom: auto; width: auto; max-width: 92%; margin: -40px auto 0; } .hero-visual .board .row:nth-child(3) { display: grid; } }
+.strip { width: 100%; height: auto; aspect-ratio: 21 / 7; object-fit: cover; border-radius: 22px; display: block; margin-bottom: 40px; }
+.about-photo { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 16px; display: block; background: #FBFAF7; }
+.faq-wrap { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 48px; align-items: start; }
+@media (max-width: 900px) { .faq-wrap { grid-template-columns: minmax(0, 1fr); } }
+.faq-photo { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 22px; display: block; position: sticky; top: 96px; }
+.faq-photo-cap { font-size: 14px; color: var(--muted); margin-top: 10px; }
 
 /* tablero de ejemplo */
 .board { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 20px; box-shadow: 0 1px 2px rgba(14,42,59,.06), 0 18px 40px rgba(14,42,59,.10); min-width: 0; }
@@ -254,6 +271,8 @@ footer .brand small { color: #4FC9C6; }
         <p class="fine">Diagnóstico de 20 minutos por videollamada. Sin compromiso.</p>
       </div>
 
+      <div class="hero-visual">
+        <img class="hero-photo" src="img/hero.jpg" alt="Profesional sonriente revisando su tablero de vacantes en el portátil" width="1400" height="1050">
       <div class="board" role="img" aria-label="Ejemplo de tablero de vacantes clasificadas: tres vacantes con puntajes 88, 71 y 42">
         <div class="board-head"><b>Tu tablero de vacantes</b><span class="tag">Ejemplo</span></div>
         <div class="rows">
@@ -262,6 +281,7 @@ footer .brand small { color: #4FC9C6; }
           <div class="row"><div class="score s-lo">42</div><div><div class="t">Auxiliar administrativo</div><div class="m">Comercio · Cartagena · Por debajo de tu rango</div></div><span class="pill p-lo">Baja</span></div>
         </div>
         <div class="board-foot"><i></i>Se actualiza con las alertas de elempleo, Computrabajo, Magneto e Indeed.</div>
+      </div>
       </div>
     </div>
   </section>
@@ -287,6 +307,7 @@ footer .brand small { color: #4FC9C6; }
         <h2 id="t-servicio">Todo tu perfil laboral, listo y alineado</h2>
         <p class="lead">Los mismos cargos, fechas y logros en todos lados, escritos para que te encuentren.</p>
       </div>
+      <img class="strip" src="img/banner-senales.jpg" alt="Señales de datos que viajan hacia un centro de control" width="1800" height="771">
       <div class="svc">
         <article><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/></svg><h3>Hoja de vida ATS</h3><p>Con logros medibles y las palabras clave de tu cargo.</p></article>
         <article><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg><h3>LinkedIn optimizado</h3><p>Titular, "Acerca de", experiencias, aptitudes y banner.</p></article>
@@ -356,10 +377,9 @@ footer .brand small { color: #4FC9C6; }
   <section id="sobre-mi" aria-labelledby="t-sobre">
     <div class="wrap about">
       <div class="about-card on-deep">
-        <svg class="mark big" viewBox="0 0 64 64" aria-hidden="true"><path class="c" d="M45.1 18.9A18.5 18.5 0 1 0 45.1 45.1"/><path class="j" d="M35 20v15a6 6 0 0 1-12 0"/><circle class="d" cx="52" cy="32" r="4.5"/></svg>
+        <img class="about-photo" src="img/automatizacion.jpg" alt="Hojas de cálculo que se convierten en un informe automático" width="1200" height="895">
         <div><p class="nm">Ing. Julio César Canchano Parodi</p><p class="sp">Ingeniería · Automatización · IA</p></div>
-        <svg class="dots" viewBox="0 0 180 140" aria-hidden="true"><circle cx="20" cy="20" r="3"/><circle cx="50" cy="20" r="3"/><circle cx="80" cy="20" r="3"/><circle cx="110" cy="20" r="3"/><circle cx="140" cy="20" r="3"/><circle cx="20" cy="50" r="3"/><circle cx="50" cy="50" r="3"/><circle cx="80" cy="50" r="3"/><circle cx="110" cy="50" r="3"/><circle cx="140" cy="50" r="3"/><circle cx="20" cy="80" r="3"/><circle cx="50" cy="80" r="3"/><circle cx="80" cy="80" r="3"/><circle cx="110" cy="80" r="3"/><circle cx="140" cy="80" r="3"/><circle cx="20" cy="110" r="3"/><circle cx="50" cy="110" r="3"/><circle cx="80" cy="110" r="3"/><circle cx="110" cy="110" r="3"/><circle cx="140" cy="110" r="3"/></svg>
-      </div>
+              </div>
       <div class="txt">
         <p class="label">Quién está detrás</p>
         <h2 id="t-sobre">Un ingeniero que automatiza procesos de verdad</h2>
@@ -391,12 +411,15 @@ footer .brand small { color: #4FC9C6; }
         <p class="label">Preguntas frecuentes</p>
         <h2 id="t-faq">Lo que más me preguntan</h2>
       </div>
+      <div class="faq-wrap">
       <div class="faq">
         <details><summary>¿Qué necesito para empezar?</summary><p>Tu hoja de vida actual, tu perfil de LinkedIn en PDF (si tienes) y el cargo que buscas. Con eso hago el diagnóstico. El resto de documentos te los pido con una lista clara.</p></details>
         <details><summary>¿Cuánto tiempo toma?</summary><p>El plan Esencial queda listo en 3 días hábiles y el Profesional en 5. La Búsqueda Acompañada dura 60 días.</p></details>
         <details><summary>¿Me garantizas que voy a conseguir empleo?</summary><p>No, y desconfía de quien te lo garantice. Te garantizo un perfil que pasa los filtros y un sistema que te trae las vacantes correctas. Conseguir el empleo depende también de las empresas y de tus entrevistas, y en eso también te puedo preparar.</p></details>
         <details><summary>¿Sirve si busco trabajo remoto o en otro país?</summary><p>Sí. Configuramos alertas de trabajo remoto y, si te quieres mudar, búsquedas en otras ciudades y en organismos internacionales. Para el exterior suelen pedir inglés, así que lo revisamos en el diagnóstico.</p></details>
         <details><summary>¿Cómo pago?</summary><p>50 % al iniciar y 50 % a la entrega, por transferencia, Nequi, Daviplata o PSE. La Búsqueda Acompañada se puede pagar en 2 cuotas.</p></details>
+      </div>
+      <figure style="margin: 0;"><img class="faq-photo" src="img/mentoria.jpg" alt="Mentoría por videollamada para preparar una entrevista" width="1200" height="895"><figcaption class="faq-photo-cap">En la Búsqueda Acompañada preparamos juntos tus entrevistas por videollamada.</figcaption></figure>
       </div>
     </div>
   </section>
