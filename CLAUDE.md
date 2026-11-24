@@ -16,3 +16,4 @@ Todo documento, presentación, flyer, propuesta, plantilla o entregable que se c
 
 - Las publicaciones y flyers para LinkedIn, Instagram, Facebook y WhatsApp van **sin precios**. El precio solo va en la propuesta comercial, la presentación de venta y la conversación con el cliente.
 - Nada se publica en redes sin que Julio apruebe el texto exacto y la red.
+- Antes de publicar, confirmar con Julio la cuenta, página o canal exacto donde saldrá la pieza. El único canal de YouTube conectado hoy es el infantil "Luci y el Tren de los Colores": nunca publicar ahí contenido de Perfil Laboral Inteligente ni de la marca Julio Canchano.
